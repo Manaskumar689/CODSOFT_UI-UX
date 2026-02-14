@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Menu UI</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f4f6f9;
+}
+
+header{
+    background:#ff6b35;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+}
+
+.category{
+    margin-top:25px;
+}
+
+.category h2{
+    border-left:5px solid #ff6b35;
+    padding-left:10px;
+    color:#333;
+}
+
+.menu-item{
+    display:flex;
+    justify-content:space-between;
+    background:white;
+    padding:15px;
+    margin-top:10px;
+    border-radius:10px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu-item:hover{
+    transform:scale(1.02);
+    transition:0.3s;
+}
+
+.item-info{
+    max-width:70%;
+}
+
+.price{
+    font-weight:bold;
+    color:#ff6b35;
+}
+
+button{
+    background:#ff6b35;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#e55a2a;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🍽️ Smart Restaurant Menu</h1>
+<p>Easy to Browse • Beautiful • Fast Ordering</p>
+</header>
+
+<div class="container">
+
+<!-- Starters -->
+<div class="category">
+<h2>🥗 Starters</h2>
+
+<div class="menu-item">
+<div class="item-info">
+<h3>Veg Spring Roll</h3>
+<p>Crispy rolls filled with fresh vegetables.</p>
+</div>
+<div>
+<p class="price">₹120</p>
+<button>Add</button>
+</div>
+</div>
+
+<div class="menu-item">
+<div class="item-info">
+<h3>Chicken Wings</h3>
+<p>Spicy grilled wings with signature sauce.</p>
+</div>
+<div>
+<p class="price">₹220</p>
+<button>Add</button>
+</div>
+</div>
+</div>
+
+<!-- Main Course -->
+<div class="category">
+<h2>🍛 Main Course</h2>
+
+<div class="menu-item">
+<div class="item-info">
+<h3>Paneer Butter Masala</h3>
+<p>Rich creamy tomato gravy with paneer cubes.</p>
+</div>
+<div>
+<p class="price">₹260</p>
+<button>Add</button>
+</div>
+</div>
+
+<div class="menu-item">
+<div class="item-info">
+<h3>Chicken Biryani</h3>
+<p>Traditional dum cooked aromatic biryani.</p>
+</div>
+<div>
+<p class="price">₹320</p>
+<button>Add</button>
+</div>
+</div>
+</div>
+
+<!-- Desserts -->
+<div class="category">
+<h2>🍰 Desserts</h2>
+
+<div class="menu-item">
+<div class="item-info">
+<h3>Chocolate Lava Cake</h3>
+<p>Warm cake with melted chocolate center.</p>
+</div>
+<div>
+<p class="price">₹150</p>
+<button>Add</button>
+</div>
+</div>
+
+<div class="menu-item">
+<div class="item-info">
+<h3>Vanilla Ice Cream</h3>
+<p>Classic creamy vanilla scoop.</p>
+</div>
+<div>
+<p class="price">₹90</p>
+<button>Add</button>
+</div>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
