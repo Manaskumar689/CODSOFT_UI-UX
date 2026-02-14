@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce UI</title>
+
+<style>
+body{
+    font-family:Arial, sans-serif;
+    margin:0;
+    background:#f4f6f9;
+}
+
+header{
+    background:#111;
+    color:white;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    margin:0 10px;
+    text-decoration:none;
+}
+
+.search-bar{
+    padding:8px;
+    border-radius:5px;
+    border:none;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+}
+
+h2{
+    margin-top:25px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width:100%;
+    border-radius:8px;
+}
+
+button{
+    background:#007bff;
+    border:none;
+    color:white;
+    padding:8px 12px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🛒 SmartShop</h1>
+<input type="text" id="searchInput" class="search-bar" placeholder="Search Products..." onkeyup="searchProduct()">
+<nav>
+<a href="#">Home</a>
+<a href="#">Categories</a>
+<a href="#">Cart</a>
+</nav>
+</header>
+
+<div class="container">
+
+<h2>📱 Electronics</h2>
+<div class="products">
+
+<div class="card" data-name="mobile">
+<img src="https://via.placeholder.com/200">
+<h3>Smart Mobile</h3>
+<p>₹15,000</p>
+<button>Buy Now</button>
+</div>
+
+<div class="card" data-name="laptop">
+<img src="https://via.placeholder.com/200">
+<h3>Laptop</h3>
+<p>₹55,000</p>
+<button>Buy Now</button>
+</div>
+
+</div>
+
+<h2>👕 Fashion</h2>
+<div class="products">
+
+<div class="card" data-name="shirt">
+<img src="https://via.placeholder.com/200">
+<h3>Men Shirt</h3>
+<p>₹999</p>
+<button>Buy Now</button>
+</div>
+
+<div class="card" data-name="shoes">
+<img src="https://via.placeholder.com/200">
+<h3>Sneakers</h3>
+<p>₹2,499</p>
+<button>Buy Now</button>
+</div>
+
+</div>
+
+</div>
+
+<script>
+function searchProduct(){
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.getElementsByClassName("card");
+
+    for(let i=0;i<cards.length;i++){
+        let name = cards[i].getAttribute("data-name");
+        if(name.includes(input)){
+            cards[i].style.display="block";
+        }else{
+            cards[i].style.display="none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
